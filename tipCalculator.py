@@ -1,4 +1,5 @@
 greeting = "Welcome to the tip calculator!"
+print(greeting)
 billTotal = input("What was the total bill?\n")
 tipAmount = input("How much tip would you like to give?\n")
 numberOfPatrons = input("How many people are splitting the bill?\n")
