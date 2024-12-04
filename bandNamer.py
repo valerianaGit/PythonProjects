@@ -1,7 +1,7 @@
 #username = input("What is your name?")
 #length = len(username)
 #len returns the length of characters in a string
-#print(length)
+#string concatenation
 programGreeting = "Hello! Welcome to the Band Name Generator"
 print(programGreeting)
 birthCity = input("Which city did you grow up in?\n")
