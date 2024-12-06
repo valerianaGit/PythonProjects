@@ -7,3 +7,9 @@ if random_number == 1:
     print("Heads" + " Your random number was 1")
 elif random_number == 2:
     print("Tails" + " Your random number was 2")
+#====================================================================================
+states_of_america = ["Alabama", "Arkansas", "Alaska", "Delaware", "Connecticut"]
+print(states_of_america[1])
+print(states_of_america[-1])#start counting from the end of the list, using a negative integer
+states_of_america[1] = "Georgia" #change the item at that index
+states_of_america.append("Michigan")#add to the end of the list
