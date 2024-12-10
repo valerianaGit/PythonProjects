@@ -1,4 +1,5 @@
 # Float, int, and basic math
+
 greeting = "Welcome to the tip calculator!"
 print(greeting)
 billTotal = float(input("What was the total bill?\n$"))
