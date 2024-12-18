@@ -13,3 +13,9 @@ print(states_of_america[1])
 print(states_of_america[-1])#start counting from the end of the list, using a negative integer
 states_of_america[1] = "Georgia" #change the item at that index
 states_of_america.append("Michigan")#add to the end of the list
+#====================================================================================
+# Randomize who will pay the bill 
+list_of_friends = ["Branden", "Jimothy", "Karen", "Jordan Belfort"]
+random_friend = random.randint(0,3)
+print("the random friend is at index " + str(random_friend))
+print(list_of_friends[random_friend])
