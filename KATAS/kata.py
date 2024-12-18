@@ -32,3 +32,40 @@ if __name__ == "__main__":
     play_game()
 
 #==================================================================================== 
+#inputs, strings to ints , and compare some choices in if else statements 
+import random
+
+print("Welcome to Python Pizza! Let's work out the bill for your order")
+pizza_size_input = input("Size of your pizza? Enter small, medium, or large \n").lower()
+print("size input was " + pizza_size_input)
+
+def pizza_size_price_func(size):
+    if size == "small":
+        return 15
+    elif size == "medium":
+        return 20
+    else:
+        return 25
+
+pizza_size_price = pizza_size_price_func(pizza_size_input)
+pepperoni_yes_or_no = input("Would you like pepperoni with that? Type yes or no \n").lower()
+
+def pepperoni_price_function(pepperoni_choice, size):
+    if size == "small":
+        return 2 if pepperoni_choice in ["yes", "y"] else 0
+    else:
+        return 3 if pepperoni_choice in ["yes", "y"] else 0
+
+pepperoni_upcharge = pepperoni_price_function(pepperoni_yes_or_no, pizza_size_input)
+cheese_yes_or_no = input("Add cheese? Type yes or no \n").lower()
+
+def cheese_price_function(cheese_choice):
+    return 1 if cheese_choice in ["yes", "y"] else 0
+
+cheese_upcharge = cheese_price_function(cheese_yes_or_no)
+
+print("Pizza size cost is " + str(pizza_size_price))
+print("Pepperoni upcharge " + str(pepperoni_upcharge))
+print("Cheese upcharge " + str(cheese_upcharge))
+pizza_price = str(pizza_size_price + pepperoni_upcharge + cheese_upcharge)
+print("Your bill is $" + pizza_price)
