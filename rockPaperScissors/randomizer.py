@@ -23,3 +23,13 @@ print(list_of_friends[random_friend])
 # Randomize who will pay the bill 
 random_friend_using_choice = random.choice(list_of_friends)
 print(random_friend_using_choice)
+#====================================================================================NESTED LISTS 
+print("Nested lists exercise")
+more_friends = ["Xavier", "Natasha"]
+party_friends = [list_of_friends, more_friends]
+print(party_friends) #[['Branden', 'Jimothy', 'Karen', 'Jordan Belfort'], ['Xavier', 'Natasha']]
+print(party_friends[0][1]) #Jimothy
+print(party_friends[1][0]) #Xavier
+print(party_friends[1]) #['Xavier', 'Natasha']
+print(party_friends[0][0]) #Branden
+print(party_friends[1][1]) #Natasha
