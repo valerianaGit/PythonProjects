@@ -19,3 +19,7 @@ list_of_friends = ["Branden", "Jimothy", "Karen", "Jordan Belfort"]
 random_friend = random.randint(0,3)
 print("the random friend is at index " + str(random_friend))
 print(list_of_friends[random_friend])
+#====================================================================================
+# Randomize who will pay the bill 
+random_friend_using_choice = random.choice(list_of_friends)
+print(random_friend_using_choice)
