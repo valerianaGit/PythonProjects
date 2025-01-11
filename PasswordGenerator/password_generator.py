@@ -20,14 +20,14 @@ print(letters_lowercase)
 print(symbols_list)
 print(numbers_list)
 print(len(numbers_list)) #length of list
-letters_count_str = input("how many letters would you like?")
-symbols_count_str = input("how many symbols would you like?")
-numbers_count_str = input("how many numbers would you like?") 
+letters_count_str = input("how many letters would you like?\n")
+symbols_count_str = input("how many symbols would you like?\n")
+numbers_count_str = input("how many numbers would you like?\n") 
 def chose_from_list(list_name, times):
     #from a given list_name chose a random item, a set number of times
-    random_number = random.randint(0, len(list_name) - 1)
     password_return = []
-    for times in list_name:
+    for item in list_name:
+        random_number = random.randint(0, len(list_name) - 1)
         password_return.append(list_name[random_number])
         print(password_return)
     return password_return
@@ -35,5 +35,6 @@ def chose_from_list(list_name, times):
 password_letters = chose_from_list(letters_lowercase, int(letters_count_str))
 
 print(password_letters)
+print(len(password_letters))
 print("Your password is ", password_letters)
 
