@@ -14,25 +14,7 @@
 # IF DECODE  ask for message to DEcode AND shift number 
 #===============================================
 import string
-#alphabet = string.ascii_lowercase
-input_message = input("Input your message \n").strip().lower()
-shift_number = int(input("Input your shift number \n"))
 
-#hello, shift 1 => elloh
-def encode(message, shift):
-    return_message = ""
-    for i, char in enumerate(message):
-        new_char = message[i + shift]
-        print(new_char)
-        "".join(new_char)
-       # print(return_message)
-    print("Your encoded message is ", "".join([return_message, new_char]))
-    return return_message
-encode(input_message, shift_number)
-
-#def encode2(message, shift):
- #   for i, char in message:
-  #      new_char = message[i + shift]
         
 #========================================= ENCODE ========================================
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
@@ -60,3 +42,41 @@ encrypt("z",9)
 # TODO-3: Call the 'encrypt()' function and pass in the user inputs. You should be able to test the code and encrypt a
 #  message.
 encrypt(text, shift)
+#========================================= ENCODE ========================================
+
+# TODO-1: Import and print the logo from art.py when the program starts.
+import art
+print(art.logo)
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+# TODO-2: What happens if the user enters a number/symbol/space?
+
+
+def caesar(original_text, shift_amount, encode_or_decode):
+    output_text = ""
+
+    for letter in original_text:
+        if encode_or_decode == "decode":
+            shift_amount *= -1
+        if letter in alphabet:
+            shifted_position = alphabet.index(letter) + shift_amount
+            shifted_position %= len(alphabet)
+            output_text += alphabet[shifted_position]
+        output_text += letter
+    print(f"Here is the {encode_or_decode}d result: {output_text}")
+
+
+
+# TODO-3: Can you figure out a way to restart the cipher program?
+    repeat = input("Would you like to go again? Type 'yes' or 'no'")
+    if repeat == "yes":
+        direction_again = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+        text_again = input("Type your message:\n").lower()
+        shift_again = int(input("Type the shift number:\n"))
+        caesar(original_text=text_again, shift_amount= shift_again,encode_or_decode= direction_again)
+
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+
+caesar(original_text=text, shift_amount=shift, encode_or_decode=direction)
