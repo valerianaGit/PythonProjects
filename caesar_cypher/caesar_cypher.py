@@ -34,7 +34,7 @@ encode(input_message, shift_number)
  #   for i, char in message:
   #      new_char = message[i + shift]
         
-#========================================= ENCODE
+#========================================= ENCODE ========================================
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 alphabets = alphabet + alphabet + alphabet + alphabet
 
