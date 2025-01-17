@@ -13,12 +13,15 @@ def compare_bids():
     for key in bids:
         #print(bids[key])
         current_bid = int(bids[key]) 
+        current_bidder = key
         print("current bid ", current_bid)
         print("highest bid ", highest_bid)
         if current_bid > highest_bid:
             highest_bid = current_bid
+            highest_bidder = current_bidder
     print(highest_bid)
-    return highest_bid
+    print("higest bidder wins: ", highest_bidder)
+    return highest_bid  
 def blind_auction_game():
     ask_for_bids()
     compare_bids()
