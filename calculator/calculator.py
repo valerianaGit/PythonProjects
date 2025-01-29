@@ -19,6 +19,7 @@ def calculator_brain(first_number, second_number, operation_chosen):
     elif operation_chosen == "/":
         print(" operation chosen", "/") 
         total = first_number / second_number 
-    print(total)
+    #print(total)
     return total
-calculator_brain(first_number, second_number, operation_chosen)
+total = calculator_brain(first_number, second_number, operation_chosen)
+print("The total is ",total)
